@@ -1,0 +1,42 @@
+{
+  "name": "@skemacms/mcp-server",
+  "version": "1.2.1",
+  "description": "Serveur MCP officiel pour Skema CMS - Connectez Claude Desktop a vos donnees",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "skema-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["mcp", "skema", "cms", "headless", "claude", "ai", "model-context-protocol"],
+  "author": "Skema <contact@skemacms.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skemacms/mcp-server.git"
+  },
+  "homepage": "https://docs.skemacms.com/guide/mcp",
+  "bugs": {
+    "url": "https://github.com/skemacms/mcp-server/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.9",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
+  }
+}
