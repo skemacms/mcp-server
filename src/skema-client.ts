@@ -31,7 +31,7 @@ export const mcpCall = async <T = unknown>(
   const response = await fetch(`${BASE_URL}/mcp`, {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${API_KEY}`,
+      "X-API-Key": API_KEY,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
